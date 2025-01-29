@@ -1,0 +1,107 @@
+@use '../variables/variables.scss' as *;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 21px;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 85px;
+    cursor: pointer;
+
+    &-button {
+      border: none;
+      font-size: $fs-16;
+      color: $midnight-grey;
+      background-color: transparent;
+    }
+
+    &-img {
+      margin-left: 9px;
+    }
+
+    &-content-text {
+      font-size: $fs-19;
+      margin-left: 10px;
+    }
+  }
+
+  &__search {
+    position: relative;
+    flex-grow: 1;
+    margin: 0 20px;
+
+    &-input {
+      width: 95%;
+      padding: 14px 40px;
+      border-radius: 20px;
+      font-size: $fs-14;
+      border: none;
+      outline: none;
+      background-color: $moon-white;
+    }
+
+    &-icon,
+    &-settings {
+      position: absolute;
+      top: 30%;
+      font-size: $fs-18;
+      display: flex;
+      justify-content: center;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    &-icon {
+      left: 10px;
+      cursor: pointer;
+    }
+
+    &-settings {
+      right: 10px;
+      cursor: pointer;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: 85px;
+    font-size: $fs-16;
+    color: $midnight-grey;
+
+    &-item {
+      margin-left: 15px;
+      font-size: $fs-18;
+      cursor: pointer;
+    }
+
+    &-profile {
+      margin-left: 20px;
+
+      &-img {
+        width: 30px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  /* İkonlara genel stil */
+  &-icon {
+    cursor: pointer;
+  }
+
+  &-icon-menu {
+    font-size: $fs-16;
+    margin-right: 9px;
+    color: $midnight-grey;
+  }
+}

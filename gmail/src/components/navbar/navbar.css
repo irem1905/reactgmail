@@ -1,0 +1,90 @@
+@charset "UTF-8";
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 21px;
+  /* İkonlara genel stil */
+}
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 85px;
+  cursor: pointer;
+}
+.navbar__logo-button {
+  border: none;
+  font-size: 1rem;
+  color: #65676d;
+  background-color: transparent;
+}
+.navbar__logo-img {
+  margin-left: 9px;
+}
+.navbar__logo-content-text {
+  font-size: 1.188rem;
+  margin-left: 10px;
+}
+.navbar__search {
+  position: relative;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+.navbar__search-input {
+  width: 95%;
+  padding: 14px 40px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  border: none;
+  outline: none;
+  background-color: #eaf1fb;
+}
+.navbar__search-icon, .navbar__search-settings {
+  position: absolute;
+  top: 30%;
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.navbar__search-icon {
+  left: 10px;
+  cursor: pointer;
+}
+.navbar__search-settings {
+  right: 10px;
+  cursor: pointer;
+}
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 85px;
+  font-size: 1rem;
+  color: #65676d;
+}
+.navbar__actions-item {
+  margin-left: 15px;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+.navbar__actions-profile {
+  margin-left: 20px;
+}
+.navbar__actions-profile-img {
+  width: 30px;
+  border-radius: 50%;
+}
+.navbar-icon {
+  cursor: pointer;
+}
+.navbar-icon-menu {
+  font-size: 1rem;
+  margin-right: 9px;
+  color: #65676d;
+}/*# sourceMappingURL=navbar.css.map */
