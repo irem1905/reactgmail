@@ -1,0 +1,81 @@
+@use '../variables/variables.scss' as *;
+
+
+
+.sidebar {
+    width: 225px;
+    background-color: #f7f8fc;
+    padding: 20px 0 20px 0;
+    transition: width 0.3s ease;
+    overflow: hidden;
+  // display: flex;
+  // flex-direction: column;
+  // width: 240px;
+  // height: 100px;
+
+  &__button {
+    display: flex;
+    margin-bottom: 15px;
+
+    &-compose {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $icy-landscape; 
+      border: none;
+      border-radius: 12px;
+      padding: 16px 17px;
+      font-size: $fs-14;
+      margin: 0 0 21px 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      text-decoration: none;
+
+      &:hover{
+        box-shadow: 0 6px 17px rgba(0, 0, 0, 0.2);
+      }
+
+      &-pencil {
+        font-size: 18px;
+        margin-right: 10px;
+        color: $black;
+      }
+
+      &-text {
+        font-weight: 500;
+        color: $black-oak;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+
+    &-button {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: none;
+      border: none;
+      padding: 10px 10px 10px 25px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $christmas-silver;
+        border: 0 20px 20px 0;
+      }
+
+      &-text {
+        margin-left: 12px;
+        font-weight: 500;
+        text-decoration: none;
+        font-size: 14px;
+        color: #5f6368;
+      }
+    }
+  }
+}

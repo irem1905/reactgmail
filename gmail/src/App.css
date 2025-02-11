@@ -4,4 +4,9 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f7f8fc;
+  height: 100dvh;
+}
+
+.app {
+  height: 100dvh;
 }/*# sourceMappingURL=App.css.map */

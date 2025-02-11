@@ -1,0 +1,21 @@
+body {
+  background-color: #f7f8fc;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.layout__box {
+  display: flex;
+  flex: 1 1 auto;
+}
+.layout__box-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.layout__box-outlet {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */

@@ -1,10 +1,8 @@
-@charset "UTF-8";
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 21px;
-  /* İkonlara genel stil */
 }
 .navbar__logo {
   display: flex;
@@ -15,31 +13,42 @@
 .navbar__logo-button {
   border: none;
   font-size: 1rem;
+  margin-top: 5px;
   color: #65676d;
   background-color: transparent;
 }
 .navbar__logo-img {
   margin-left: 9px;
 }
-.navbar__logo-content-text {
+.navbar__logo-text {
   font-size: 1.188rem;
   margin-left: 10px;
+  color: #64686c;
 }
 .navbar__search {
+  display: flex;
   position: relative;
   flex-grow: 1;
   margin: 0 20px;
+  flex-direction: row;
+  background-color: #eaf1fb;
+  border-radius: 20px;
+  align-items: center;
+}
+.navbar__search-icons {
+  margin: 0 15px 0 15px;
+  color: #65676d;
 }
 .navbar__search-input {
   width: 95%;
-  padding: 14px 40px;
+  padding: 14px;
   border-radius: 20px;
   font-size: 0.875rem;
   border: none;
   outline: none;
   background-color: #eaf1fb;
 }
-.navbar__search-icon, .navbar__search-settings {
+.navbar__search-icon {
   position: absolute;
   top: 30%;
   font-size: 1.125rem;
@@ -51,20 +60,12 @@
   background-color: transparent;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-.navbar__search-icon {
-  left: 10px;
-  cursor: pointer;
-}
-.navbar__search-settings {
-  right: 10px;
-  cursor: pointer;
+  margin-block: 11px;
 }
 .navbar__actions {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-left: 85px;
   font-size: 1rem;
   color: #65676d;
 }
