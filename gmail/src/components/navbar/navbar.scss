@@ -1,5 +1,114 @@
 @use '../variables/variables.scss' as *;
 
+// .navbar {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding: 21px;
+
+//   &__logo {
+//     display: flex;
+//     align-items: center;
+//     margin-right: 85px;
+//     cursor: pointer;
+
+//     &-button {
+//       border: none;
+//       cursor: pointer;
+//       font-size: $fs-16;
+//       margin-top: 5px;
+//       color: $midnight-grey;
+//       background-color: transparent;
+//     }
+
+//     &-img {
+//       margin-left: 9px;
+//     }
+
+//     &-text {
+//       font-size: $fs-19;
+//       margin-left: 10px;
+//       color: $equinox;
+//     }
+//   }
+
+//   &__search {
+//     display: flex;
+//     position: relative;
+//     flex-grow: 1;
+//     margin: 0 20px;
+//     flex-direction: row;
+//     background-color: $moon-white;
+//     border-radius: 20px;
+//     align-items: center;
+
+//     &-icons{
+//       margin: 0 15px 0 15px;
+//       color: $midnight-grey;
+//     }
+
+
+//     &-input {
+//       width: 95%;
+//       padding: 14px;
+//       border-radius: 20px;
+//       font-size: $fs-14;
+//       border: none;
+//       outline: none;
+//       background-color: $moon-white;
+//     }
+
+//     &-icon{
+//       position: absolute;
+//       top: 30%;
+//       font-size: $fs-18;
+//       display: flex;
+//       justify-content: center;
+//       border-radius: 50%;
+//       width: 30px;
+//       height: 30px;
+//       background-color: transparent;
+//       cursor: pointer;
+//       transition: background-color 0.3s ease;
+//       margin-block: 11px;
+//     }
+//   }
+
+//   &__actions {
+//     display: flex;
+//     align-items: center;
+//     gap: 16px;
+//     font-size: $fs-16;
+//     color: $midnight-grey;
+
+//     &-item {
+//       margin-left: 15px;
+//       font-size: $fs-18;
+//       cursor: pointer;
+//     }
+
+//     &-profile {
+//       margin-left: 20px;
+
+//       &-img {
+//         width: 30px;
+//         border-radius: 50%;
+//       }
+//     }
+//   }
+
+//     &-icon {
+//       cursor: pointer;
+//   }
+
+//   &-icon-menu {
+//     font-size: $fs-16;
+//     margin-right: 9px;
+//     color: $midnight-grey;
+//   }
+// }
+
+
 .navbar {
   display: flex;
   align-items: center;
@@ -14,6 +123,7 @@
 
     &-button {
       border: none;
+      cursor: pointer;
       font-size: $fs-16;
       margin-top: 5px;
       color: $midnight-grey;
@@ -41,11 +151,10 @@
     border-radius: 20px;
     align-items: center;
 
-    &-icons{
+    &-icons {
       margin: 0 15px 0 15px;
       color: $midnight-grey;
     }
-
 
     &-input {
       width: 95%;
@@ -57,7 +166,7 @@
       background-color: $moon-white;
     }
 
-    &-icon{
+    &-icon {
       position: absolute;
       top: 30%;
       font-size: $fs-18;
@@ -96,13 +205,50 @@
     }
   }
 
-    &-icon {
-      cursor: pointer;
+  &-icon {
+    cursor: pointer;
   }
 
   &-icon-menu {
     font-size: $fs-16;
     margin-right: 9px;
     color: $midnight-grey;
+  }
+
+  // Pop-up stilini burada tanımlıyoruz
+  & .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); // Yarı saydam arka plan
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; // Diğer öğelerin üstünde olmasını sağlar
+  }
+
+  & .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+  }
+
+  & .popup img {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  & .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
   }
 }

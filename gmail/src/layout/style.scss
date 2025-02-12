@@ -20,12 +20,14 @@ body{
     }
 
     &-outlet{
+        background-color: $white;
+        border-radius: 15px;
         display: flex;
         flex-direction: column;
     }
 
-    &-tool{
+    // &-tool{
 
-    }
+    // }
   }
 }

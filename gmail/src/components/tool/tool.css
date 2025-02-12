@@ -12,7 +12,6 @@
 .tool img:hover,
 .tool i:hover {
   transform: scale(1.5);
-  box-shadow: 0 0 10px;
 }
 .tool__divider {
   width: 23px;

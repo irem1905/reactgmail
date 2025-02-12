@@ -12,11 +12,10 @@
   & img,
   i {
     margin: 25px 0;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; // Yumuşak geçiş
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
       transform: scale(1.5); // icon büyümesi
-      box-shadow: 0 0 10px;
     }
   }
 

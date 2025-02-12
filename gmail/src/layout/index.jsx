@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import Navbar from '../components/navbar/navbar'
 import Sidebar from '../components/sidebar/sidebar'
 import { Outlet } from 'react-router-dom'
@@ -16,7 +16,7 @@ function GmailLayout() {
         <div className='layout__box-outlet'>
           <Outlet/>
           <div>
-            hello
+            Hello,Anonim :)) 
           </div>
         </div>
         <div className='layout__box-tool'>
