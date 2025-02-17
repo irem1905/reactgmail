@@ -3,11 +3,35 @@
 
 
 
+// .tool {
+//   width: 47px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+
+//   & img,
+//   i {
+//     margin: 25px 0;
+//     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+
+//     &:hover {
+//       transform: scale(1.5); // icon büyümesi
+//     }
+//   }
+
+//   &__divider {
+//     width: 23px;
+//     height: 2px;
+//   }
+// }
+
+
 .tool {
   width: 47px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   & img,
   i {
@@ -15,12 +39,16 @@
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      transform: scale(1.5); // icon büyümesi
+      transform: scale(1.5);  
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
     }
   }
 
   &__divider {
     width: 23px;
     height: 2px;
+    background-color: $carte-blanche;  
+    margin: 10px 0;  
+    font-size: 20px;
   }
 }

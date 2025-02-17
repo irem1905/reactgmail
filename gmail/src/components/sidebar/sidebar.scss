@@ -48,36 +48,36 @@
     }
   }
 
-  &__navigation {
-    display: flex;
-    flex-direction: column;
+  // &__navigation {
+  //   display: flex;
+  //   flex-direction: column;
 
-    &-button {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      background: none;
-      color: $black-oak;
-      border: none;
-      padding: 10px 10px 10px 25px;
-      width: 100%;
-      cursor: pointer;
-      transition: background-color 0.3s, color 0.3s;
-      text-decoration: none;
+  //   &-button {
+  //     display: flex;
+  //     align-items: center;
+  //     gap: 20px;
+  //     background: none;
+  //     color: $black-oak;
+  //     border: none;
+  //     padding: 10px 10px 10px 25px;
+  //     width: 100%;
+  //     cursor: pointer;
+  //     transition: background-color 0.3s, color 0.3s;
+  //     text-decoration: none;
 
-      &:hover {
-        background-color: $christmas-silver;
-        border: 0 20px 20px 0;
-      }
+  //     &:hover {
+  //       background-color: $christmas-silver;
+  //       border: 0 20px 20px 0;
+  //     }
 
-      &-text {
-        // margin-left: 12px;
-        margin: 0;
-        font-weight: 500;
-        text-decoration: none;
-        font-size: 14px;
-        color: $black-oak;
-      }
-    }
-  }
+  //     &-text {
+  //       // margin-left: 12px;
+  //       margin: 0;
+  //       font-weight: 500;
+  //       text-decoration: none;
+  //       font-size: 14px;
+  //       color: $black-oak;
+  //     }
+  //   }
+  // }
 }

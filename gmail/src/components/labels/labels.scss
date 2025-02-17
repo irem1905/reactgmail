@@ -1,196 +1,359 @@
 @use '../variables/variables.scss' as *;
 
 
+// .labels {
+//   display: flex;
+//   flex-direction: column;
+//   padding: 26px 0 0 23px;
+//   border-radius: 8px;
+
+//   &__wrapper {
+//     display: flex;
+//     justify-content: space-between;
+//     margin-bottom: 15px;
+//   }
+
+//   &__header {
+//     font-size: $fs-15;
+//     color: $stiletto;
+//   }
+
+//   &__title {
+//     font-size: 20px;
+//     color: $stiletto;
+//   }
+
+//   &__add {
+//     background: none;
+//     border: none;
+//     font-size: 20px;
+//     color: #5f6368;
+//     cursor: pointer;
+
+//     // &:hover {
+//     //   background-color: $christmas-silver;
+//     //   border-radius: 50%;
+//     // }
+//   }
+
+//   &__modal {
+//     display: none; /* Hidden by default */
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0, 0, 0, 0.5);
+//     justify-content: center;
+//     align-items: center;
+//     padding: 20px;
+//     z-index: 1000;
+
+//     &--hidden {
+//       display: none; /* Modal visibility toggle */
+//     }
+
+//     &-content {
+//       background-color: #fff;
+//       padding: 20px;
+//       border-radius: 8px;
+//       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+//       width: 300px;
+//     }
+
+//     &-close {
+//       position: absolute;
+//       top: 10px;
+//       right: 10px;
+//       font-size: 24px;
+//       cursor: pointer;
+//       color: #5f6368;
+//       transition: color 0.3s ease;
+
+//       &:hover {
+//         color: #202124;
+//       }
+//     }
+
+//     &-title {
+//       font-size: 18px;
+//       font-weight: bold;
+//       margin-bottom: 15px;
+//       color: #202124;
+//     }
+
+//     &-input-container {
+//       margin-bottom: 10px;
+
+//       & > .labels__modal-label {
+//         display: block;
+//         font-size: 14px;
+//         margin-bottom: 5px;
+//         color: #5f6368;
+//       }
+
+//       & > .labels__modal-input {
+//         width: 100%;
+//         padding: 8px;
+//         font-size: 14px;
+//         border: 1px solid #dcdcdc;
+//         border-radius: 4px;
+//         color: #202124;
+
+//         &:focus {
+//           border-color: #4285f4;
+//           outline: none;
+//         }
+//       }
+//     }
+
+//     &-color-container {
+//       margin-bottom: 10px;
+
+//       & > .labels__modal-color-label {
+//         display: block;
+//         font-size: 14px;
+//         margin-bottom: 5px;
+//         color: #5f6368;
+//       }
+
+//       & > .labels__modal-color-picker {
+//         width: 100%;
+//         height: 36px;
+//         border: none;
+//         cursor: pointer;
+//       }
+//     }
+
+//     &-actions {
+//       display: flex;
+//       justify-content: space-between;
+
+//       & > .labels__modal-cancel,
+//       & > .labels__modal-create {
+//         padding: 8px 16px;
+//         font-size: 14px;
+//         border: none;
+//         cursor: pointer;
+//         border-radius: 4px;
+//         transition: background-color 0.3s ease;
+
+//         &:hover {
+//           background-color: #4285f4;
+//           color: white;
+//         }
+//       }
+
+//       & > .labels__modal-cancel {
+//         background-color: #e0e0e0;
+//         color: #202124;
+//       }
+
+//       & > .labels__modal-create {
+//         background-color: #4285f4;
+//         color: white;
+//       }
+//     }
+//   }
+
+//   &__items {
+//     display: flex
+// ;
+//     align-items: center;
+//     gap: 20px;
+//     background: none;
+//     color: #4f4f4f;
+//     border: none;
+//     padding: 10px 10px 10px 25px;
+//     width: 100%;
+//     cursor: pointer;
+//     transition: background-color 0.3s, color 0.3s;
+//     text-decoration: none;
+
+//     &-container {
+//       // display: flex;
+//       // align-items: center;
+//       // padding: 6px 12px;
+//       // border-radius: 20px;
+//       // font-size: 14px;
+//       // cursor: pointer;
+//       // gap: 16px;
+
+//       // &:hover {
+//       //   background-color: #c1d9f7;
+//       // }
+
+//       &-remove {
+//         margin-left: 8px;
+//         cursor: pointer;
+//         font-size: 12px;
+//         color: #d93025;
+
+//         &:hover {
+//           color: #c1351d;
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
 .labels {
-  display: flex;
-  flex-direction: column;
-  padding: 26px 0 0 23px;
   border-radius: 8px;
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    align-items: center;
+    padding: 26px 0 12px 23px;
   }
 
   &__header {
-    font-size: $fs-15;
-    color: $stiletto;
-  }
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
-  &__title {
-    font-size: 20px;
-    color: $stiletto;
+    .labels__title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
   }
 
   &__add {
-    background: none;
     border: none;
-    font-size: 20px;
-    color: #5f6368;
     cursor: pointer;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    background-color: $ghost-white;
 
-    // &:hover {
-    //   background-color: $christmas-silver;
-    //   border-radius: 50%;
-    // }
-  }
-
-  &__modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    z-index: 1000;
-
-    &--hidden {
-      display: none; /* Modal visibility toggle */
-    }
-
-    &-content {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      width: 300px;
-    }
-
-    &-close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 24px;
-      cursor: pointer;
-      color: #5f6368;
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: #202124;
-      }
-    }
-
-    &-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 15px;
-      color: #202124;
-    }
-
-    &-input-container {
-      margin-bottom: 10px;
-
-      & > .labels__modal-label {
-        display: block;
-        font-size: 14px;
-        margin-bottom: 5px;
-        color: #5f6368;
-      }
-
-      & > .labels__modal-input {
-        width: 100%;
-        padding: 8px;
-        font-size: 14px;
-        border: 1px solid #dcdcdc;
-        border-radius: 4px;
-        color: #202124;
-
-        &:focus {
-          border-color: #4285f4;
-          outline: none;
-        }
-      }
-    }
-
-    &-color-container {
-      margin-bottom: 10px;
-
-      & > .labels__modal-color-label {
-        display: block;
-        font-size: 14px;
-        margin-bottom: 5px;
-        color: #5f6368;
-      }
-
-      & > .labels__modal-color-picker {
-        width: 100%;
-        height: 36px;
-        border: none;
-        cursor: pointer;
-      }
-    }
-
-    &-actions {
-      display: flex;
-      justify-content: space-between;
-
-      & > .labels__modal-cancel,
-      & > .labels__modal-create {
-        padding: 8px 16px;
-        font-size: 14px;
-        border: none;
-        cursor: pointer;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: #4285f4;
-          color: white;
-        }
-      }
-
-      & > .labels__modal-cancel {
-        background-color: #e0e0e0;
-        color: #202124;
-      }
-
-      & > .labels__modal-create {
-        background-color: #4285f4;
-        color: white;
-      }
-    }
   }
 
   &__items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    margin-top: 16px;
 
-    .labels__item {
+    &-container {
       display: flex;
       align-items: center;
-      padding: 6px 12px;
-      background-color: #e8f0fe;
-      border-radius: 20px;
-      font-size: 14px;
-      color: #1a73e8;
-      cursor: pointer;
+      justify-content: flex-start;
+      gap: 8px;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #c1d9f7;
+        background-color: #f1f1f1;
       }
 
-      &-remove {
-        margin-left: 8px;
-        cursor: pointer;
-        font-size: 12px;
-        color: #d93025;
-
-        &:hover {
-          color: #c1351d;
-        }
+      .labels__item-name {
+        font-size: 14px;
+        color: #333;
+        font-weight: 500;
       }
     }
   }
 }
 
+// Modal Bileşeni İçin Stil
+.labelsModal {
+  position: fixed;
 
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
 
+  &__close {
+    align-self: flex-end;
+    font-size: 20px;
+    cursor: pointer;
 
+    &:hover {
+      color: red;
+    }
+  }
 
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    label {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+
+  &__color-picker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    input[type="color"] {
+      border: none;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+
+    .cancel {
+      border: none;
+      cursor: pointer;
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 8px;
+      background-color: gray;
+      color: white;
+
+      &:hover {
+        background-color: #5a5a5a;
+      }
+    }
+
+    .create {
+      border: none;
+      cursor: pointer;
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: white;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}

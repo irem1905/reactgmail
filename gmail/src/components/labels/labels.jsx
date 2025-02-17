@@ -1,9 +1,124 @@
 
-import "./labels.scss";
-import icons from "../variables/variables";
 
 
-function labels() {
+// import { useState } from "react";
+// import "./labels.scss";
+// import icons from "../variables/variables";
+// import LabelsModal from "../modal/labelsModal";
+// import SidebarItem from "../sidebar-İtem/sidebarItem";
+
+// function Labels() {
+//   const [isModalOpen, setIsModalOpen] = useState(false);
+//   const [labelName, setLabelName] = useState("");
+//   const [labelColor, setLabelColor] = useState("#");
+//   const [categories, setCategories] = useState([{ name: "Categories", color: "#333333" }]);
+
+//   const openModal = () => setIsModalOpen(true);
+//   const closeModal = () => setIsModalOpen(false);
+
+//   const generateRandomColor = () => {
+//     const letters = "0123456789ABCDEF";
+//     let color = "#";
+//     for (let i = 0; i < 6; i++) {
+//       color += letters[Math.floor(Math.random() * 16)];
+//     }
+//     return color;
+//   };
+
+//   const addLabel = () => {
+//     if (labelName.trim() !== "") {
+//       const newCategory = {
+//         name: labelName,
+//         color: labelColor === "#" ? generateRandomColor() : labelColor,
+//       };
+//       setCategories([...categories, newCategory]);
+//       setLabelName("");
+//       setLabelColor("#");
+//       closeModal();
+//     }
+//   };
+
+//   return (
+//     <div className="labels">
+//       <div className="labels__wrapper">
+//         <div className="labels__header">
+//           <span className="labels__title">Labels</span>
+//         </div>
+
+//         <button className="labels__add" onClick={openModal}>
+//           {icons.plus}
+//         </button>
+//       </div>
+
+//       <LabelsModal
+//         modalOpen={isModalOpen}
+//         toggleModal={closeModal}
+//         labelName={labelName}
+//         setLabelName={setLabelName}
+//         labelColor={labelColor}
+//         setLabelColor={setLabelColor}
+//         addLabel={addLabel}
+//       />
+
+//       <div className="labels__items">
+//         {categories.map((category, index) => (
+//           <SidebarItem
+//             key={index}
+//             icon={icons.labels}
+//             text={category.name}
+//             path="#"
+//             isToggle={false}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Labels;
+
+
+
+
+  import { useState } from "react";
+  import "./labels.scss";
+  import icons from "../variables/variables";
+  import LabelsModal from "../modal/labelsModal";
+  import SidebarItem from "../sidebar-İtem/sidebarItem";
+
+function Labels() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [labelName, setLabelName] = useState("");
+  const [labelColor, setLabelColor] = useState("#");
+  const [categories, setCategories] = useState([{ name: "Categories", color: "#333333" }]);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  // Function to generate random color
+  const generateRandomColor = () => {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
+
+  const addLabel = () => {
+    if (labelName.trim() !== "") {
+      const newCategory = {
+        name: labelName,
+        color: labelColor === "#" ? generateRandomColor() : labelColor,
+      };
+      setCategories([...categories, newCategory]);
+      setLabelName("");
+      setLabelColor("#");
+      closeModal(false);
+    }
+  };
+
   return (
     <div className="labels">
       <div className="labels__wrapper">
@@ -11,98 +126,35 @@ function labels() {
           <span className="labels__title">Labels</span>
         </div>
 
-        <button className="labels__add">
+        <button className="labels__add" onClick={openModal}>
           {icons.plus}
         </button>
       </div>
 
-      <div className="labels__modal labels__modal--hidden">
-        <div className="labels__modal-content">
-          <span className="labels__modal-close" id="close">&times;</span>
-          <span className="labels__modal-title">Yeni etiket</span>
-        </div>
-
-        <div className="labels__modal-input-container">
-          <span className="labels__modal-label">Lütfen yeni bir etiket adı girin:</span>
-          <input type="text" className="labels__modal-input" id="newLabel" placeholder="Etiket adını yazın..." />
-        </div>
-
-        <div className="labels__modal-nested-container">
-          <span className="labels__modal-nested-label">Etiketi iç içe düzenle:</span>
-          <input type="text" className="labels__modal-input" id="nestedLabel" />
-        </div>
-
-        <div className="labels__modal-color-container">
-          <span className="labels__modal-color-label">Etiket rengi seçin:</span>
-          <input type="color" className="labels__modal-color-picker" id="labelColor" />
-        </div>
-
-        <div className="labels__modal-actions">
-          <button className="labels__modal-cancel">Cancel</button>
-          <button className="labels__modal-create">Create</button>
-        </div>
-      </div>
+      <LabelsModal
+        modalOpen={isModalOpen}
+        toggleModal={closeModal}
+        labelName={labelName}
+        setLabelName={setLabelName}
+        labelColor={labelColor}
+        setLabelColor={setLabelColor}
+        addLabel={addLabel}
+      />
 
       <div className="labels__items">
-        {/* Etiket öğeleri burada yer alacak */}
+        {categories.map((category, index) => (
+          <SidebarItem
+            key={index}
+            icon={icons.labels}
+            text={category.name}
+            path="#"
+            isToggle={false}
+            color={category.color} // Pass the category's color to SidebarItem
+          />
+        ))}
       </div>
     </div>
-  )
+  );
 }
 
-
-
-export default labels
-
-
-
-
-
-
-
-// function labels() {
-//   return (
-//     <div className="labels">
-//       <div className="labels__wrapper">
-//         <div className="labels-header">
-//           <span className="labels-title">Labels</span>
-//         </div>
-
-//       <button className="labels-add">
-//         {/* <i className="icons fa-solid fa-plus"></i> */}
-//       </button>
-//     </div>
-
-//     <div className="labels__modal-hidden">
-//       <div className="modal-content">
-//         <span className="modal-close" id="close">&times;</span>
-//         <span className="modal-title">Yeni etiket</span>
-//       </div>
-
-//       <div className="modal-input-container">
-//         <span className="modal-label">Lütfen yeni bir etiket adı girin:</span>
-//         <input type="text" className="modal-input" id="newLabel" placeholder="Etiket adını yazın..." />
-//       </div>
-
-//       <div className="modal-nested-container">
-//         <span className="modal-nested-label">Etiketi iç içe düzenle:</span>
-//         <input type="text" className="modal-input" id="nestedLabel" />
-//       </div>
-
-//       <div className="modal-color-container">
-//         <span className="modal-color-label">Etiket rengi seçin:</span>
-//         <input type="color" className="modal-color-picker" id="labelColor" />
-//       </div>
-
-//       <div className="modal-actions">
-//         <button className="modal-cancel">Cancel</button>
-//         <button className="modal-create">Create</button>
-//       </div>
-//     </div>
-
-//     <div className="labels-items">
-
-//     </div>
-//   </div>
-//   )
-// }
+export default Labels;

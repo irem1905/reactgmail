@@ -2,13 +2,18 @@
 @use "../components/variables/variables.scss" as *;
 
 body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, sans-serif;
     background-color: $ghost-white;
+    height: 100dvh;
 }
 
 .layout {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100dvh;
 
   &__box {
     display: flex;

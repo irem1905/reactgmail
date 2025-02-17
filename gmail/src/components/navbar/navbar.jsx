@@ -97,7 +97,7 @@ function Navbar() {
       {isPopupVisible && (
         <div className="popup">
           <div className="popup-content">
-            <button onClick={togglePopup} className="close-btn">
+            <button onClick={togglePopup} className="close-buton">
               &times; {/* Kapatma butonu */}
             </button>
             {/* Pop-up içine img'ler veya diğer içerikler ekleyebilirsin */}

@@ -87,14 +87,18 @@
 
 
 
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+
+
+
+
+import { useState } from "react";
 import "./sidebar.scss"; 
 import icons from "../variables/variables";
 import Labels from "../labels/labels";
+import SidebarItem from "../sidebar-İtem/sidebarItem";
 
 function Sidebar() {
-  const [isMoreExpanded, setIsMoreExpanded] = useState(false); // "More" butonunun genişlemesini takip eden state
+  const [isMoreExpanded, setIsMoreExpanded] = useState(false);
 
   const toggleMenu = () => {
     setIsMoreExpanded(!isMoreExpanded);
@@ -106,7 +110,7 @@ function Sidebar() {
     { icon: icons.clock, text: "Snoozed", path: "/snoozed", isAdditional: false },
     { icon: icons.paper, text: "Sent", path: "/gmail/sent", isAdditional: false },
     { icon: icons.file, text: "Drafts", path: "/drafts", isAdditional: false },
-    { icon: isMoreExpanded ? icons.less : icons.more, text: isMoreExpanded ? 'Less' : 'More', path: '#', isToggle: true },
+    { icon: isMoreExpanded ? icons.less : icons.more, text: isMoreExpanded ? "Less" : "More", path: "#", isToggle: true },
     { icon: icons.label, text: "Labels", path: "/labels", isAdditional: true },
     { icon: icons.spam, text: "Spam", path: "/spam", isAdditional: true },
     { icon: icons.mail, text: "Mail", path: "/mail", isAdditional: true },
@@ -116,42 +120,36 @@ function Sidebar() {
 
   return (
     <div className="sidebar">
-      {/* Compose butonu */}
       <div className="sidebar__button">
-        <NavLink to="/compose" className="sidebar__button-compose" id="composeButton">
+        <a to="/compose" className="sidebar__button-compose" id="composeButton">
           <span className="sidebar__button-compose-pencil">{icons.pencil}</span>
           <span className="sidebar__button-compose-text">Compose</span>
-        </NavLink>
+        </a>
       </div>
 
-
       {sidebarItems.map((item, index) => {
-        // Eğer moreBtn false ve item bir moreItem ise, o öğeyi gösterme
         if (!isMoreExpanded && item.isAdditional) return null;
-
         return (
-          <div className="sidebar__navigation" key={index}>
-            <div 
-              className="sidebar__navigation-button" 
-              onClick={item.isToggle ? toggleMenu : undefined}
-            >
-              <span>{item.icon}</span>
-              {item.isToggle ? (
-                <p className="sidebar__navigation-button-text">{item.text}</p>
-              ) : (
-                <NavLink href={item.path} className="sidebar__navigation-button-text">
-                  {item.text}
-                </NavLink>
-              )}
-            </div>
-          </div>
+          <SidebarItem
+            key={index}
+            icon={item.icon}
+            text={item.text}
+            path={item.path}
+            isToggle={item.isToggle}
+            onClick={item.isToggle ? toggleMenu : undefined}
+          />
         );
       })}
 
-      {/* Labels bileşeni */}
       <Labels />
     </div>
   );
 }
 
 export default Sidebar;
+
+
+
+
+
+
