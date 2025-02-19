@@ -34,32 +34,4 @@
 .sidebar__button-compose-text {
   font-weight: 500;
   color: #4f4f4f;
-}
-.sidebar__navigation {
-  display: flex;
-  flex-direction: column;
-}
-.sidebar__navigation-button {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background: none;
-  color: #4f4f4f;
-  border: none;
-  padding: 10px 10px 10px 25px;
-  width: 100%;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  text-decoration: none;
-}
-.sidebar__navigation-button:hover {
-  background-color: #e0e0e0;
-  border: 0 20px 20px 0;
-}
-.sidebar__navigation-button-text {
-  margin: 0;
-  font-weight: 500;
-  text-decoration: none;
-  font-size: 14px;
-  color: #4f4f4f;
 }/*# sourceMappingURL=sidebar.css.map */

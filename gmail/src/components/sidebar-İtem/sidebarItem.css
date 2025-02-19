@@ -1,0 +1,28 @@
+.snavigation {
+  display: flex;
+  flex-direction: column;
+}
+.snavigation__button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: none;
+  color: #4f4f4f;
+  border-radius: 0 20px 20px 0;
+  border: none;
+  padding: 10px 10px 10px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+.snavigation__button:hover {
+  background-color: #e0e0e0;
+  border: 0 20px 20px 0;
+}
+.snavigation__button-text {
+  margin: 0;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+  color: #4f4f4f;
+}/*# sourceMappingURL=sidebarItem.css.map */

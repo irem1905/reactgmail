@@ -90,18 +90,24 @@
 
 
 
-
 import { useState } from "react";
-import "./sidebar.scss"; 
+import "./sidebar.scss";
 import icons from "../variables/variables";
-import Labels from "../labels/labels";
 import SidebarItem from "../sidebar-İtem/sidebarItem";
+import Labels from "../labels/labels"; // Buraya ekledik
+import ComposeModal from "../composeModal/composeModal"; 
+
 
 function Sidebar() {
   const [isMoreExpanded, setIsMoreExpanded] = useState(false);
+  const [isComposeModalOpen, setIsComposeModalOpen] = useState(false); // State to control modal visibility
 
   const toggleMenu = () => {
     setIsMoreExpanded(!isMoreExpanded);
+  };
+
+  const toggleComposeModal = () => {
+    setIsComposeModalOpen(!isComposeModalOpen); // Toggle the modal
   };
 
   const sidebarItems = [
@@ -121,10 +127,10 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar__button">
-        <a to="/compose" className="sidebar__button-compose" id="composeButton">
+        <button className="sidebar__button-compose" onClick={toggleComposeModal}>
           <span className="sidebar__button-compose-pencil">{icons.pencil}</span>
           <span className="sidebar__button-compose-text">Compose</span>
-        </a>
+        </button>
       </div>
 
       {sidebarItems.map((item, index) => {
@@ -142,6 +148,9 @@ function Sidebar() {
       })}
 
       <Labels />
+
+      {/* Add ComposeModal here */}
+      <ComposeModal modalOpen={isComposeModalOpen} toggleModal={toggleComposeModal} />
     </div>
   );
 }

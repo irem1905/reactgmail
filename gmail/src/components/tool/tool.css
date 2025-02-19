@@ -1,8 +1,10 @@
 .tool {
   width: 47px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .tool img,
 .tool i {
@@ -12,8 +14,12 @@
 .tool img:hover,
 .tool i:hover {
   transform: scale(1.5);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .tool__divider {
   width: 23px;
   height: 2px;
+  background-color: #ededfe;
+  margin: 10px 0;
+  font-size: 20px;
 }/*# sourceMappingURL=tool.css.map */

@@ -1,33 +1,9 @@
 
 @use '../variables/variables.scss' as *;
 
-
-
-// .tool {
-//   width: 47px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-
-//   & img,
-//   i {
-//     margin: 25px 0;
-//     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-
-//     &:hover {
-//       transform: scale(1.5); // icon büyümesi
-//     }
-//   }
-
-//   &__divider {
-//     width: 23px;
-//     height: 2px;
-//   }
-// }
-
-
 .tool {
   width: 47px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;

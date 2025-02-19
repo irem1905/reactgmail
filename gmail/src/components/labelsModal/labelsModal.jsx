@@ -1,4 +1,6 @@
 import "./labelsModal.scss";
+import PropTypes from 'prop-types';
+
 
 function LabelsModal({
   modalOpen,
@@ -28,8 +30,6 @@ function LabelsModal({
           />
         </div>
 
-
-
         <div className="labelsModal__color-picker">
           <label htmlFor="labelColor">Etiket Rengi:</label>
           <input
@@ -52,6 +52,17 @@ function LabelsModal({
     </div>
   );
 }
+
+LabelsModal.propTypes = {
+  modalOpen: PropTypes.bool.isRequired,
+  toggleModal: PropTypes.func.isRequired,
+  labelName: PropTypes.string.isRequired,
+  setLabelName: PropTypes.func.isRequired,
+  labelColor: PropTypes.string.isRequired,
+  setLabelColor: PropTypes.func.isRequired,
+  addLabel: PropTypes.func.isRequired,
+};
+
 
 export default LabelsModal;
 
