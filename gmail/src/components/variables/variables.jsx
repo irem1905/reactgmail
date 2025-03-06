@@ -1,5 +1,5 @@
 import { FiSearch , FiPlus , FiStar} from "react-icons/fi";
-import { MdTune , MdMailOutline ,MdLabel , MdOutlineLockClock} from "react-icons/md";
+import { MdTune , MdMailOutline ,MdLabel , MdOutlineLockClock ,  MdOutlineCheckBoxOutlineBlank , MdRefresh , MdChevronRight , MdChevronLeft , MdOutlineGroup} from "react-icons/md";
 import { IoMdHelpCircleOutline , IoMdSettings , IoMdLink} from "react-icons/io";
 import { CgMenuGridO } from "react-icons/cg";
 import { ImPencil } from "react-icons/im";
@@ -15,6 +15,8 @@ import { BsPaperclip } from "react-icons/bs";
 import { CiImageOn } from "react-icons/ci";
 import { HiOutlinePencil } from "react-icons/hi2";
 import { LuEllipsisVertical } from "react-icons/lu";
+import { BiPurchaseTag } from "react-icons/bi";
+
 
 
 
@@ -54,6 +56,14 @@ image:<CiImageOn />,
 lock:<MdOutlineLockClock />,
 linePencil:<HiOutlinePencil />,
 ellipsis:<LuEllipsisVertical />,
+
+// mailContent
+checkbox:<MdOutlineCheckBoxOutlineBlank />,
+refresh:<MdRefresh />,
+tag:<BiPurchaseTag />,
+left:<MdChevronLeft />,
+rigt:<MdChevronRight />,
+user:<MdOutlineGroup />,
 
 
 

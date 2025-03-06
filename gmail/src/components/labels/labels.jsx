@@ -69,6 +69,7 @@ function Labels() {
             path="#"
             isToggle={false}
             color={category.color} // Pass the category's color to SidebarItem
+            variant="style"
           />
         ))}
       </div>

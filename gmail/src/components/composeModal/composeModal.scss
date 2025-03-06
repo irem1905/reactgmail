@@ -1,85 +1,277 @@
 @use '../variables/variables.scss' as *;
 
 
+// .composeModal {
+//   position: fixed;
+//   bottom: 20px;
+//   right: 20px;
+//   width: 400px;
+//   max-width: 100%;
+//   background-color: white;
+//   border-radius: 8px;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity 0.3s, visibility 0.3s;
+
+//   &.open {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+
+//   &__content {
+//     padding: 20px;
+//   }
+
+//   &__close {
+//     position: absolute;
+//     top: 10px;
+//     right: 10px;
+//     font-size: 24px;
+//     cursor: pointer;
+//   }
+
+//   &__title {
+//     font-size: 18px;
+//     margin-bottom: 10px;
+//   }
+
+//   &__input-group {
+//     margin-bottom: 15px;
+
+//     label {
+//       display: block;
+//       margin-bottom: 5px;
+//       font-size: 14px;
+//     }
+
+//     input,
+//     textarea {
+//       width: 100%;
+//       padding: 8px;
+//       font-size: 14px;
+//       border-radius: 4px;
+//       border: 1px solid #ddd;
+//     }
+
+//     textarea {
+//       resize: vertical;
+//       min-height: 100px;
+//     }
+//   }
+
+//   &__actions {
+//     display: flex;
+//     justify-content: flex-end;
+
+//     button {
+//       padding: 8px 12px;
+//       font-size: 14px;
+//       cursor: pointer;
+//       border-radius: 4px;
+//       border: none;
+//       margin-left: 10px;
+//     }
+
+//     .cancel {
+//       background-color: #f0f0f0;
+//     }
+
+//     .send {
+//       background-color: #000000;
+//       color: white;
+//     }
+//   }
+// }
+
+
+
+
+
+// .composeModal {
+//   position: fixed;
+//   bottom: 20px;
+//   right: 20px;
+//   width: 500px;
+//   background: white;
+//   border-radius: 8px;
+//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+//   display: flex;
+//   flex-direction: column;
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity 0.3s, transform 0.3s;
+
+//   &.open {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+
+//   &__header {
+//     background: #f2f2f2;
+//     padding: 10px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+
+//   &__content {
+//     padding: 15px;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 10px;
+
+//     input, textarea {
+//       width: 100%;
+//       padding: 10px;
+//       border: none;
+//       border-bottom: 1px solid #ddd;
+//       outline: none;
+//     }
+
+//     textarea {
+//       resize: vertical;
+//       min-height: 150px;
+//     }
+//   }
+
+//   &__footer {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 10px;
+//     background: #f2f2f2;
+//     border-bottom-left-radius: 8px;
+//     border-bottom-right-radius: 8px;
+
+//     .send {
+//       background-color: #1a73e8;
+//       color: white;
+//       padding: 8px 20px;
+//       border: none;
+//       border-radius: 4px;
+//       font-weight: bold;
+//       cursor: pointer;
+//     }
+
+//     .icons {
+//       display: flex;
+//       gap: 15px;
+
+//       .icon {
+//         cursor: pointer;
+//         font-size: 18px;
+//         color: #5f6368;
+//       }
+//     }
+
+//     .trash {
+//       cursor: pointer;
+//       font-size: 20px;
+//       color: red;
+//     }
+//   }
+// }
+
+
+
+
 .composeModal {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 400px;
-  max-width: 100%;
-  background-color: white;
+  width: 500px;
+  background: $white;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
 
   &.open {
     opacity: 1;
     visibility: visible;
   }
 
+  &__title{
+    font-size: $fs-12;
+    color: $shadowed-steel;
+  }
+
+  &__controls{
+    display: flex;
+    gap: 8px;
+  }
+
+  &__header {
+    background-color: $cotton-ball;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__content {
-    padding: 20px;
-  }
-
-  &__close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  &__title {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  &__input-group {
-    margin-bottom: 15px;
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-size: 14px;
-    }
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
     input,
     textarea {
-      width: 100%;
-      padding: 8px;
-      font-size: 14px;
-      border-radius: 4px;
-      border: 1px solid #ddd;
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid $chef-s-hat;
+      outline: none;
     }
 
     textarea {
       resize: vertical;
-      min-height: 100px;
+      min-height: 150px;
     }
   }
 
-  &__actions {
+  &__footer {
     display: flex;
-    justify-content: flex-end;
-
-    button {
-      padding: 8px 12px;
-      font-size: 14px;
-      cursor: pointer;
-      border-radius: 4px;
-      border: none;
-      margin-left: 10px;
-    }
-
-    .cancel {
-      background-color: #f0f0f0;
-    }
+    align-items: center;
+    padding: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 
     .send {
-      background-color: #000000;
-      color: white;
+      background-color: $dead-blue-eyes;
+      color: $white;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 16px;
+      font-size: $fs-12;
+      cursor: pointer;
+      margin-right: 6px; // 6px boşluk
+    }
+
+    .icons {
+      display: flex;
+      gap: 14px;
+
+      .icon {
+        cursor: pointer;
+        font-size: 18px;
+        color: $shadowed-steel;
+      }
+    }
+
+    .spacer {
+      flex: 1; // Baya boşluk bırakıyor
+    }
+
+    .trash {
+      cursor: pointer;
+      font-size: 18px;
+      color: $shadowed-steel;
     }
   }
 }
+
+

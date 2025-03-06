@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 26px 0 12px 23px;
+  padding: 26px 0 0 23px;
 }
 .labels__header {
   display: flex;

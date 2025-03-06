@@ -1,34 +1,199 @@
 @use '../variables/variables.scss' as *;
 
-.snavigation {
-  display: flex;
-  flex-direction: column;
+// .snavigation {
+//   display: flex;
+//   flex-direction: column;
 
-  &__button {
+//   &__button {
+//     display: flex; 
+//     align-items: center;
+//     gap: 20px;
+//     background: none;
+//     color: $black-oak;
+//     border-radius: 0 20px 20px 0;
+//     border: none;
+//     padding: 10px 10px 10px 25px;
+//     cursor: pointer;
+//     transition: background-color 0.3s, color 0.3s;
+//     text-decoration: none;
+
+//     &:hover {
+//       background-color: $christmas-silver;
+//       border: 0 20px 20px 0;
+//     }
+
+//     &-text {
+//       // margin-left: 12px;
+//       margin: 0;
+//       font-weight: 500;
+//       text-decoration: none;
+//       font-size: 14px;
+//       color: $black-oak;
+//     }
+//   }
+// }
+
+
+
+// .snavigation {
+//   width: 225px;
+//   background-color: #f7f8fc;
+//   // padding: 20px 0;
+//   transition: width 0.3s ease;
+//   overflow: hidden;
+  
+//   &__style {
+//     display: flex;
+//     align-items: center;
+//     gap: 20px;
+//     background: none;
+//     color: $black-oak;
+//     border-radius: 0 20px 20px 0;
+//     border: none;
+//     padding: 10px 10px 10px 25px;
+//     cursor: pointer;
+//     transition: background-color 0.3s, color 0.3s;
+//     text-decoration: none;
+
+//     &:hover {
+//       background-color: $christmas-silver;
+//       border: 0 20px 20px 0;
+//     }
+
+//     &-text {
+//       // margin-left: 12px;
+//       margin: 0;
+//       font-weight: 500;
+//       text-decoration: none;
+//       font-size: 14px;
+//       color: $black-oak;
+//     }
+    
+//   }
+
+//   /* Sidebar specific styles */
+// &__menu {
+//     // flex: 1;
+//     width: 21%;
+//     padding: 14px 20px;
+//     background: none;
+//     border: none;
+//     cursor: pointer;
+//     color: #202124;
+//     // font-weight: 600;
+//     text-align: center;
+//     transition: background-color 0.2s ease, color 0.2s ease;
+//     display: flex;
+//     align-items: center;
+//     gap: 8px;
+
+//     &.active {
+//       color: #1967d2;
+//       border-bottom: 2px solid #1967d2;
+//     }
+
+//     &:hover {
+//       background-color: rgba(0, 0, 0, 0.04);
+//     }
+
+//     i {
+//       font-size: 18px;
+//     }
+
+//     span {
+//       font-size: 14px;
+//       font-weight: 600;
+//     }
+//   }
+// }
+
+
+
+.snavigation {
+
+//   background-color: #f7f8fc;
+//   padding: 20px 0 20px 0;
+//   transition: width 0.3s ease;
+//   overflow: hidden;
+// display: flex;
+// flex-direction: column;
+// height: 100px;
+  &__style {
+    // width: 225px;
     display: flex;
     align-items: center;
     gap: 20px;
     background: none;
     color: $black-oak;
     border-radius: 0 20px 20px 0;
-    border: none;
-    padding: 10px 10px 10px 25px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     text-decoration: none;
 
-    &:hover {
-      background-color: $christmas-silver;
-      border: 0 20px 20px 0;
-    }
-
-    &-text {
-      // margin-left: 12px;
-      margin: 0;
-      font-weight: 500;
-      text-decoration: none;
-      font-size: 14px;
+    &-wrapper{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: none;
       color: $black-oak;
+      border-radius: 0 20px 20px 0;
+      padding: 10px 10px 10px 25px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      text-decoration: none;
+      width: 225px;
+
+      &:hover {
+        background-color: $christmas-silver;
+      }
+  
+      &-text {
+        margin: 0;
+        font-weight: 500;
+        text-decoration: none;
+        font-size: 14px;
+        color: $black-oak;
+      }
     }
   }
-}
+
+  &__menu {
+    display: flex;
+        margin-top: 30px;
+        padding: 0 0 0 15px;
+
+        &-wrapper{
+          display: flex;
+              border: none;
+              background-color: transparent;
+              width: 209px;
+              height: 33px;
+              gap: 16px;
+              align-items: flex-start;
+              cursor: pointer;
+
+              &:hover {
+                background-color: rgba(50, 8, 236, 0.04);
+              }
+
+              span {
+                font-size: 18px;
+              }
+          
+              &-text {
+                color: #4f4f4f;
+                font-size: 0.813rem;
+                font-weight: 600;
+                font-family: "Roboto", sans-serif;
+            }
+          }
+      
+          &.active {
+            color: #1967d2;
+            border-bottom: 2px solid #1967d2;
+          }
+      }
+    }
+        
+
+

@@ -4,6 +4,7 @@ import Sidebar from '../components/sidebar/sidebar'
 import { Outlet } from 'react-router-dom'
 import Tool from '../components/tool/tool'
 import './style.scss'
+import MailContent from '../components/mailContent/mailContent'
 
 function GmailLayout() {
   return (
@@ -16,7 +17,8 @@ function GmailLayout() {
         <div className='layout__box-outlet'>
           <Outlet/>
           <div>
-            Hello,Anonim :)) 
+            {/* Hello,Anonim :))  */}
+            <MailContent/>
           </div>
         </div>
         <div className='layout__box-tool'>

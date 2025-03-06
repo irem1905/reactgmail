@@ -1,95 +1,4 @@
 
-// import React, { useState } from "react";
-// import { NavLink } from "react-router-dom";
-// import "./sidebar.scss"; 
-// import icons from "../variables/variables";
-// import Labels from "../labels/labels";
-
-// function Sidebar() {
-//   const [isMoreExpanded, setIsMoreExpanded] = useState(false); // "More" butonunun genişlemesini takip eden state
-
-//   const navigationItems = [
-//     { icon: icons.inbox, text: "Inbox", path: "/gmail/ınbox" },
-//     { icon: icons.star, text: "Starred", path: "/gmail/starred" },
-//     { icon: icons.clock, text: "Snoozed", path: "/snoozed" },
-//     { icon: icons.paper, text: "Sent", path: "/gmail/sent" },
-//     { icon: icons.file, text: "Drafts", path: "/drafts" },
-//   ];
-
-//   const additionalItems = [
-//     { icon: icons.label, text:"Labels" , path:"/labels"},
-//     { icon: icons.spam, text:"Spam" , path:"/spam"},
-//     { icon: icons.mail, text:"Mail" , path:"/mail"},
-//     { icon: icons.setting, text:"Manage Tags" , path:"/manage tags"},
-//     { icon: icons.bin, text:"Bin" , path:"/gmail/bin"},
-//   ];
-
-//   return (
-//     <div className="sidebar">
-//       {/* Compose butonu */}
-//       <div className="sidebar__button">
-//         <NavLink to="/compose" className="sidebar__button-compose" id="composeButton">
-//           <span className="sidebar__button-compose-pencil">{icons.pencil}</span>
-//           <span className="sidebar__button-compose-text">Compose</span>
-//         </NavLink>
-//       </div>
-
-//       {/* Navigasyon butonları */}
-//       <div className="sidebar__navigation">
-//         {navigationItems.map((item, index) => (
-//           <NavLink
-//             to={item.path}
-//             key={index}
-//             className="sidebar__navigation-button"
-//             // React Router v6'da aktif olma durumu için inline style kullanıyoruz
-//             style={({ isActive }) => ({
-//               backgroundColor: isActive ? '#f0f0f0' : '', // Aktif olan buton için örnek stil
-//             })}
-//           >
-//             {item.icon}
-//             <span className="sidebar__navigation-text">{item.text}</span>
-//           </NavLink>
-//         ))}
-
-//         {/* More butonu - ek öğelerin açılması için toggle */}
-//         <div
-//           className="sidebar__navigation-button"
-//           onClick={() => setIsMoreExpanded(prevState => !prevState)} // Toggle işlemi
-//         >
-//           {icons.more}
-//           <span className="sidebar__navigation-text">More</span>
-//         </div>
-
-//         {/* More butonu açıldığında ek öğeleri render ediyoruz */}
-//         {isMoreExpanded &&
-//           additionalItems.map((item, index) => (
-//             <NavLink
-//               to={item.path}
-//               key={index}
-//               className="sidebar__navigation-button"
-//               style={({ isActive }) => ({
-//                 backgroundColor: isActive ? '#f0f0f0' : '', // Ek öğeler için aktif stil
-//               })}
-//             >
-//               {item.icon}
-//               <span className="sidebar__navigation-text">{item.text}</span>
-//             </NavLink>
-//           ))}
-//       </div>
-
-//       {/* Labels bileşeni */}
-//       <Labels />
-//     </div>
-//   );
-// }
-
-// export default Sidebar;
-
-
-
-
-
-
 import { useState } from "react";
 import "./sidebar.scss";
 import icons from "../variables/variables";
@@ -126,11 +35,11 @@ function Sidebar() {
 
   return (
     <div className="sidebar">
-      <div className="sidebar__button">
-        <button className="sidebar__button-compose" onClick={toggleComposeModal}>
-          <span className="sidebar__button-compose-pencil">{icons.pencil}</span>
-          <span className="sidebar__button-compose-text">Compose</span>
-        </button>
+      <div className="sidebar__compose">
+        <compose className="sidebar__compose-button" onClick={toggleComposeModal}>
+          <span className="sidebar__compose-button-pencil">{icons.pencil}</span>
+          <span className="sidebar__compose-button-text">Compose</span>
+        </compose>
       </div>
 
       {sidebarItems.map((item, index) => {
@@ -143,6 +52,7 @@ function Sidebar() {
             path={item.path}
             isToggle={item.isToggle}
             onClick={item.isToggle ? toggleMenu : undefined}
+            variant="style"
           />
         );
       })}
