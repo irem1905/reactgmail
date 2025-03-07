@@ -3,24 +3,26 @@
 
 
 // .sidebar {
-//     width: 225px;
-//     background-color: #f7f8fc;
-//     padding: 20px 0 20px 0;
-//     transition: width 0.3s ease;
-//     overflow: hidden;
-//   display: flex;
-//   flex-direction: column;
-//   height: 100px;
+//   //   width: 225px;
+//   //   background-color: #f7f8fc;
+//   //   padding: 20px 0 20px 0;
+//   //   transition: width 0.3s ease;
+//   //   overflow: hidden;
+//   // display: flex;
+//   // flex-direction: column;
+//   // height: 100px;
 
 //   &__compose {
-//     display: flex;
-//     margin-bottom: 15px;
+//     // display: flex;
+//     // margin-bottom: 15px;
 
 //     &-button {
 //       display: flex;
 //       align-items: center;
 //       justify-content: center;
+//       gap: 15px;
 //       background-color: $icy-landscape; 
+//       color: $black-oak;
 //       border: none;
 //       border-radius: 12px;
 //       padding: 16px 17px;
@@ -29,21 +31,74 @@
 //       cursor: pointer;
 //       transition: background-color 0.3s, color 0.3s;
 //       text-decoration: none;
+//       height: 30px;
+//       width: 100px;
 
-//       &:hover{
-//         box-shadow: 0 6px 17px rgba(0, 0, 0, 0.2);
-//       }
+//       // &:hover{
+//       //   box-shadow: 0 6px 17px rgba(0, 0, 0, 0.2);
+//       // }
 
-//       &-pencil {
-//         font-size: 18px;
-//         margin-right: 10px;
-//         color: $black;
-//       }
+//       // &-pencil {
+//       //   font-size: 18px;
+//       //   margin-right: 10px;
+//       //   color: $black;
+//       // }
 
-//       &-text {
-//         font-weight: 500;
-//         color: $black-oak;
-//       }
+//       // &-text {
+//       //   font-weight: 500;
+//       //   color: $black-oak;
+//       // }
 //     }
 //   }
 // }
+
+
+
+
+.sidebar {
+  &__compose {
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      background-color: $icy-landscape; 
+      color: $black-oak;
+      border: none;
+      border-radius: 12px;
+      padding: 16px 17px;
+      font-size: $fs-14;
+      margin: 0 0 21px 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      text-decoration: none;
+      height: 30px;
+      width: 100px;
+
+      &--active { // Aktif olan butonun mavi arka planı
+        background-color: #d2e3fc; // Mavi tonu
+        color: $black-oak; 
+        font-weight: bold;
+      }
+
+      &:hover {
+        box-shadow: 0 6px 17px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+
+    &--active { // Sidebar item aktif olduğunda
+      background-color: #d2e3fc; // Mavi tonu
+      font-weight: bold;
+    }
+
+    &:hover {
+      background-color: #e3f2fd; // Açık mavi tonu
+    }
+  }
+}

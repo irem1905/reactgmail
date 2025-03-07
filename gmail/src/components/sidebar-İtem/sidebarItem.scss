@@ -41,7 +41,7 @@
 //   // padding: 20px 0;
 //   transition: width 0.3s ease;
 //   overflow: hidden;
-  
+
 //   &__style {
 //     display: flex;
 //     align-items: center;
@@ -68,7 +68,7 @@
 //       font-size: 14px;
 //       color: $black-oak;
 //     }
-    
+
 //   }
 
 //   /* Sidebar specific styles */
@@ -111,13 +111,13 @@
 
 .snavigation {
 
-//   background-color: #f7f8fc;
-//   padding: 20px 0 20px 0;
-//   transition: width 0.3s ease;
-//   overflow: hidden;
-// display: flex;
-// flex-direction: column;
-// height: 100px;
+  //   background-color: #f7f8fc;
+  //   padding: 20px 0 20px 0;
+  //   transition: width 0.3s ease;
+  //   overflow: hidden;
+  // display: flex;
+  // flex-direction: column;
+  // height: 100px;
   &__style {
     // width: 225px;
     display: flex;
@@ -130,7 +130,7 @@
     transition: background-color 0.3s, color 0.3s;
     text-decoration: none;
 
-    &-wrapper{
+    &-wrapper {
       display: flex;
       align-items: center;
       gap: 20px;
@@ -146,7 +146,7 @@
       &:hover {
         background-color: $christmas-silver;
       }
-  
+
       &-text {
         margin: 0;
         font-weight: 500;
@@ -159,41 +159,33 @@
 
   &__menu {
     display: flex;
-        margin-top: 30px;
-        padding: 0 0 0 15px;
 
-        &-wrapper{
-          display: flex;
-              border: none;
-              background-color: transparent;
-              width: 209px;
-              height: 33px;
-              gap: 16px;
-              align-items: flex-start;
-              cursor: pointer;
+    &-wrapper {
+      display: flex;
+      border: none;
+      background-color: transparent;
+      width: 209px;
+      height: 33px;
+      gap: 16px;
+      align-items: flex-start;
+      cursor: pointer;
+      padding: 0 0 0 15px;
 
-              &:hover {
-                background-color: rgba(50, 8, 236, 0.04);
-              }
+      span {
+        font-size: 18px;
+      }
 
-              span {
-                font-size: 18px;
-              }
-          
-              &-text {
-                color: #4f4f4f;
-                font-size: 0.813rem;
-                font-weight: 600;
-                font-family: "Roboto", sans-serif;
-            }
-          }
-      
-          &.active {
-            color: #1967d2;
-            border-bottom: 2px solid #1967d2;
-          }
+      &-text {
+        color: #4f4f4f;
+        font-size: 0.813rem;
+        font-weight: 600;
+        font-family: "Roboto", sans-serif;
       }
     }
-        
 
-
+    &.active {
+      color: #1967d2;
+      border-bottom: 2px solid #1967d2;
+    }
+  }
+}
