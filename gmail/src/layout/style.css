@@ -19,11 +19,14 @@ body {
 .layout__box-sidebar {
   display: flex;
   flex-direction: column;
+  width: 225px;
+  background-color: #f7f8fc;
+  padding: 20px 0 20px 0;
+  transition: width 0.3sease;
+  overflow: hidden;
 }
 .layout__box-outlet {
   flex-grow: 1;
   background-color: #ffffff;
   border-radius: 15px;
-  display: flex;
-  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */

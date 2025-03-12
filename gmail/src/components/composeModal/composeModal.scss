@@ -176,7 +176,7 @@
 
 
 
-.composeModal {
+.compose {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -193,16 +193,7 @@
   &.open {
     opacity: 1;
     visibility: visible;
-  }
-
-  &__title{
-    font-size: $fs-12;
-    color: $shadowed-steel;
-  }
-
-  &__controls{
-    display: flex;
-    gap: 8px;
+    z-index: 1;
   }
 
   &__header {
@@ -211,6 +202,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &-title{
+      font-size: $fs-12;
+      color: $shadowed-steel;
+    }
+
+  &-controls{
+    display: flex;
+    gap: 8px;
+  }
   }
 
   &__content {
@@ -229,7 +230,7 @@
 
     textarea {
       resize: vertical;
-      min-height: 150px;
+      min-height: 250px;
     }
   }
 
@@ -240,7 +241,7 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 
-    .send {
+    &-send {
       background-color: $dead-blue-eyes;
       color: $white;
       padding: 8px 20px;
@@ -251,11 +252,11 @@
       margin-right: 6px; // 6px boşluk
     }
 
-    .icons {
+    &-item {
       display: flex;
       gap: 14px;
 
-      .icon {
+      &-icon {
         cursor: pointer;
         font-size: 18px;
         color: $shadowed-steel;

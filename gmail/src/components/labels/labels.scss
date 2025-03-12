@@ -8,28 +8,27 @@
     justify-content: space-between;
     align-items: center;
     padding: 26px 0 0 23px;
-  }
 
-  &__header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &__title {
-    font-size: 18px;
-    font-weight: bold;
-    color: $stiletto;
-  }
-
-  &__add {
-    border: none;
-    cursor: pointer;
-    padding: 8px 12px;
-    font-size: 14px;
-    border-radius: 8px;
-    background-color: $ghost-white;
-
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  
+    &-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: $stiletto;
+    }
+  
+    &-add {
+      border: none;
+      cursor: pointer;
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 8px;
+      background-color: $ghost-white;
+    }
   }
 
   &__items {
@@ -43,16 +42,6 @@
       padding: 10px;
       border-radius: 8px;
       transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: #f1f1f1;
-      }
-
-      .labels__item-name {
-        font-size: 14px;
-        color: #333;
-        font-weight: 500;
-      }
     }
   }
 }
@@ -61,7 +50,7 @@
 .labelsModal {
   position: fixed;
 
-  background: white;
+  background: $white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);

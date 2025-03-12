@@ -18,86 +18,86 @@ import youtubeIcon from "../../assets/images/youtube.png"
 
 const GoogleApp = ({ closePopup }) => {
   return (
-    <div className="google-apps">
-      <div className="google-apps__grid">
-        <div className="google-apps__item">
+    <div className="apps">
+      <div className="apps__grid">
+        <div className="apps__grid-item">
           <img src={adsIcon} alt="Ads"/>
           <span>Ads</span>
         </div>
 
-        <div className="google-apps__item">
+        <div className="apps__grid-item">
           <img src={cloudSearchIcon} alt="Cloud Search"/>
           <span>Search</span>
         </div>
 
-        <div className="google-apps__item">
+        <div className="apps__grid-item">
           <img src={documentIcon} alt="Document"/>
           <span>Document</span>
         </div>
 
-        <div className="google-apps__item">
+        <div className="apps__grid-item">
           <img src={driveIcon} alt="Drive"/>
           <span>Drive</span>
         </div>
 
-        <div className="google-apps__item">
+        <div className="apps__grid-item">
           <img src={mapIcon} alt="Map"/>
           <span>Map</span>
         </div>
 
-        <div className="google-apps__item">
+        <div className="apps__grid-item">
           <img src={meetIcon} alt="Meet"/>
           <span>Meet</span>
         </div>
 
-        <div className="google-apps__item">
+        <div className="apps__grid-item">
           <img src={newIcon} alt="New"/>
           <span>New</span>
         </div>
 
-        <div className="google-apps__item">
+        <div className="apps__grid-item">
           <img src={photoIcon} alt="Photo"/>
           <span>Search</span>
         </div>
         
-        <div className="google-apps__item">
+        <div className="apps__grid-item">
           <img src={translateIcon} alt="translate" />
           <span>translate</span>
         </div>
 
-        <div className="google-apps__item">
+        <div className="apps__grid-item">
           <img src={searchIcon} alt="Search" />
           <span>Search</span>
         </div>
 
-        <div className="google-apps__item">
+        <div className="apps__grid-item">
           <img src={slideIcon} alt="Slide" />
           <span>Slide</span>
         </div>
 
-        <div className="google-apps__item">
+        <div className="apps__grid-item">
           <img src={soundIcon} alt="Sound" />
           <span>Sound</span>
         </div>
 
-        <div className="google-apps__item">
+        <div className="apps__grid-item">
           <img src={tableIcon} alt="Table" />
           <span>Table</span>
         </div>
 
-        <div className="google-apps__item">
+        <div className="apps__grid-item">
           <img src={translateIcon} alt="Translate" />
           <span>Translate</span>
         </div>
 
-        <div className="google-apps__item">
+        <div className="apps__grid-item">
           <img src={youtubeIcon} alt="Youtube" />
           <span>Youtube</span>
         </div>
           
       </div>
       {/* Kapatma butonu */}
-      <button onClick={closePopup} className="google-apps__close-btn">
+      <button onClick={closePopup} className="apps__close">
         Kapat
       </button>
     </div>

@@ -1,19 +1,10 @@
-.sidebar {
-  width: 225px;
-  background-color: #f7f8fc;
-  padding: 20px 0 20px 0;
-  transition: width 0.3s ease;
-  overflow: hidden;
-}
-.sidebar__button {
-  display: flex;
-  margin-bottom: 15px;
-}
-.sidebar__button-compose {
+.sidebar__compose-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 15px;
   background-color: #c3e7ff;
+  color: #4f4f4f;
   border: none;
   border-radius: 12px;
   padding: 16px 17px;
@@ -22,16 +13,26 @@
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   text-decoration: none;
+  height: 30px;
+  width: 100px;
 }
-.sidebar__button-compose:hover {
+.sidebar__compose-button--active {
+  background-color: #d2e3fc;
+  color: #4f4f4f;
+  font-weight: bold;
+}
+.sidebar__compose-button:hover {
   box-shadow: 0 6px 17px rgba(0, 0, 0, 0.2);
 }
-.sidebar__button-compose-pencil {
-  font-size: 18px;
-  margin-right: 10px;
-  color: #000000;
+.sidebar__item {
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
 }
-.sidebar__button-compose-text {
-  font-weight: 500;
-  color: #4f4f4f;
+.sidebar__item--active {
+  background-color: #d2e3fc;
+  font-weight: bold;
+}
+.sidebar__item:hover {
+  background-color: #e3f2fd;
 }/*# sourceMappingURL=sidebar.css.map */

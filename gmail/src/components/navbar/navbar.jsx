@@ -41,8 +41,8 @@ function Navbar() {
         <div className="navbar__actions-item" onClick={togglePopup}>
           {icons.grid} {/* 6 Noktalı Icon'a onClick event handler'ı ekledik */}
         </div>
-        <div className="navbar__profile">
-          <img src={profileIcon} alt="user" className="navbar__profile-img" />
+        <div className="navbar__action-profile">
+          <img src={profileIcon} alt="user" className="navbar__action-profile-img" />
         </div>
       </div>
 

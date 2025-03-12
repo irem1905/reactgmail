@@ -41,11 +41,11 @@ function Labels() {
   return (
     <div className="labels">
       <div className="labels__wrapper">
-        <div className="labels__header">
-          <span className="labels__title">Labels</span>
+        <div className="labels__wrapper-header">
+          <span className="labels__wrapper-header-title">Labels</span>
         </div>
 
-        <button className="labels__add" onClick={openModal}>
+        <button className="labels__wrapper-add" onClick={openModal}>
           {icons.plus}
         </button>
       </div>
@@ -69,7 +69,7 @@ function Labels() {
             path="#"
             isToggle={false}
             color={category.color} // Pass the category's color to SidebarItem
-            variant="style"
+            variant="sidebar"
           />
         ))}
       </div>

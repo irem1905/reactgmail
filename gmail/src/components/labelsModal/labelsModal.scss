@@ -1,7 +1,7 @@
 @use '../variables/variables.scss' as *;
 
 /* labelsModal.scss */
-.labelsModal {
+.lmodal {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +22,7 @@
   }
 
   &__content {
-    background-color: #fff;
+    background-color: $white;
     border-radius: 8px;
     padding: 30px;
     width: 450px;
@@ -36,36 +36,34 @@
       transform: scale(1);
     }
 
-    &__close {
+    &-close {
       position: absolute;
       top: 10px;
       right: 10px;
       font-size: 24px;
       cursor: pointer;
-      color: #888;
       transition: color 0.3s ease;
 
       &:hover {
-        color: #f44336;
+        color: $vermilion-bird;
       }
     }
 
-    &__title {
+    &-title {
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 20px;
-      color: #333;
+      color: $carbon;
       text-align: center;
     }
 
-    &__input-group {
+    &-input {
       margin-bottom: 20px;
 
       label {
         font-size: 14px;
         font-weight: 500;
         margin-bottom: 8px;
-        color: #555;
         display: block;
       }
 
@@ -73,11 +71,11 @@
         width: 100%;
         padding: 12px;
         font-size: 14px;
-        border: 1px solid #ddd;
+        border: 1px solid $cerebral-grey;
         border-radius: 6px;
         transition: border-color 0.3s ease;
         outline: none;
-        color: #333;
+        color: $carbon;
 
         &:focus {
           border-color: #4caf50;
@@ -89,7 +87,7 @@
       }
     }
 
-    &__color-picker {
+    &-color {
       margin-bottom: 20px;
 
       label {
@@ -114,10 +112,28 @@
       }
     }
 
-    &__actions {
+    &-actions {
       display: flex;
       justify-content: flex-end;
       gap: 10px;
+
+      &-cancel {
+        background-color: #f44336;
+        color: $white;
+
+        &:hover {
+          background-color: #e53935;
+        }
+      }
+
+      &-create {
+        background-color: #4caf50;
+        color: $white;
+
+        &:hover {
+          background-color: #45a049;
+        }
+      }
 
       button {
         padding: 12px 20px;
@@ -127,23 +143,6 @@
         cursor: pointer;
         transition: background-color 0.3s ease;
 
-        &.cancel {
-          background-color: #f44336;
-          color: white;
-
-          &:hover {
-            background-color: #e53935;
-          }
-        }
-
-        &.create {
-          background-color: #4caf50;
-          color: white;
-
-          &:hover {
-            background-color: #45a049;
-          }
-        }
       }
     }
   }

@@ -2,7 +2,7 @@ import "./labelsModal.scss";
 import PropTypes from 'prop-types';
 
 
-function LabelsModal({
+function labelsModal({
   modalOpen,
   toggleModal,
   labelName,
@@ -12,14 +12,14 @@ function LabelsModal({
   addLabel,
 }) {
   return (
-    <div className={`labelsModal ${modalOpen ? "open" : ""}`}>
-      <div className="labelsModal__content">
-        <span className="labelsModal__close" onClick={toggleModal}>
+    <div className={`lmodal ${modalOpen ? "open" : ""}`}>
+      <div className="lmodal__content">
+        <span className="lmodal__content-close" onClick={toggleModal}>
           &times;
         </span>
-        <h2 className="labelsModal__title">Yeni Etiket</h2>
+        <h2 className="lmodal__content-title">Yeni Etiket</h2>
 
-        <div className="labelsModal__input-group">
+        <div className="lmodal__content-input">
           <label htmlFor="labelName">Etiket Adı:</label>
           <input
             id="labelName"
@@ -30,7 +30,7 @@ function LabelsModal({
           />
         </div>
 
-        <div className="labelsModal__color-picker">
+        <div className="lmodal__comtent-color">
           <label htmlFor="labelColor">Etiket Rengi:</label>
           <input
             id="labelColor"
@@ -40,11 +40,11 @@ function LabelsModal({
           />
         </div>
 
-        <div className="labelsModal__actions">
-          <button className="cancel" onClick={toggleModal}>
+        <div className="lmodal__content-actions">
+          <button className="lmodal__content-actions-cancel" onClick={toggleModal}>
             Cancel
           </button>
-          <button className="create" onClick={addLabel}>
+          <button className="lmodal__content-actions-create" onClick={addLabel}>
             Create
           </button>
         </div>
@@ -53,7 +53,7 @@ function LabelsModal({
   );
 }
 
-LabelsModal.propTypes = {
+labelsModal.propTypes = {
   modalOpen: PropTypes.bool.isRequired,
   toggleModal: PropTypes.func.isRequired,
   labelName: PropTypes.string.isRequired,
@@ -64,6 +64,6 @@ LabelsModal.propTypes = {
 };
 
 
-export default LabelsModal;
+export default labelsModal;
 
 

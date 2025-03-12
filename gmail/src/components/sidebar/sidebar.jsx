@@ -52,7 +52,7 @@ function Sidebar() {
             path={item.path}
             isToggle={item.isToggle}
             onClick={item.isToggle ? toggleMenu : undefined}
-            variant="style"
+            variant="sidebar"
           />
         );
       })}
