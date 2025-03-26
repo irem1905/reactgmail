@@ -1,4 +1,4 @@
-.composeModal {
+.compose {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -12,50 +12,51 @@
   visibility: hidden;
   transition: opacity 0.3s, transform 0.3s;
 }
-.composeModal.open {
+.compose.open {
   opacity: 1;
   visibility: visible;
+  z-index: 1;
 }
-.composeModal__title {
-  font-size: 0.75rem;
-  color: #4a4a4a;
-}
-.composeModal__controls {
-  display: flex;
-  gap: 8px;
-}
-.composeModal__header {
+.compose__header {
   background-color: #f2f6fc;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.composeModal__content {
+.compose__header-title {
+  font-size: 0.75rem;
+  color: #4a4a4a;
+}
+.compose__header-controls {
+  display: flex;
+  gap: 8px;
+}
+.compose__content {
   padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.composeModal__content input,
-.composeModal__content textarea {
+.compose__content input,
+.compose__content textarea {
   padding: 10px;
   border: none;
   border-bottom: 1px solid #f3f5f6;
   outline: none;
 }
-.composeModal__content textarea {
+.compose__content textarea {
   resize: vertical;
   min-height: 250px;
 }
-.composeModal__footer {
+.compose__footer {
   display: flex;
   align-items: center;
   padding: 10px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-.composeModal__footer .send {
+.compose__footer-send {
   background-color: #0f57cb;
   color: #ffffff;
   padding: 8px 20px;
@@ -65,19 +66,19 @@
   cursor: pointer;
   margin-right: 6px;
 }
-.composeModal__footer .icons {
+.compose__footer-item {
   display: flex;
   gap: 14px;
 }
-.composeModal__footer .icons .icon {
+.compose__footer-item-icon {
   cursor: pointer;
   font-size: 18px;
   color: #4a4a4a;
 }
-.composeModal__footer .spacer {
+.compose__footer .spacer {
   flex: 1;
 }
-.composeModal__footer .trash {
+.compose__footer .trash {
   cursor: pointer;
   font-size: 18px;
   color: #4a4a4a;

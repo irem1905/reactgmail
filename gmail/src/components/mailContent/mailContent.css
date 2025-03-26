@@ -48,19 +48,17 @@
   display: flex;
 }
 .content__table {
-  display: flex;
-  flex-direction: column;
   width: 100%;
 }
 .content__table-item {
   display: flex;
   justify-content: space-between;
-  padding: 8px;
   border-bottom: 1px solid #dadce0;
   cursor: pointer;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
   font-size: 0.875rem;
-  line-height: 1.5;
+  align-items: center;
+  position: relative;
 }
 .content__table-item:hover {
   background-color: rgba(0, 0, 0, 0.04);
@@ -95,7 +93,6 @@
   min-width: 120px;
   font-family: "Roboto", sans-serif;
   font-size: 0.813rem;
-  line-height: 15px;
   font-weight: 500;
   color: #6d6e70;
   padding-left: 15px;
@@ -111,7 +108,6 @@
   max-width: 60%;
   font-family: "Roboto", sans-serif;
   font-size: 0.813rem;
-  line-height: 15px;
   font-weight: 400;
   color: #6d6e70;
   padding-top: 10px;
@@ -125,7 +121,6 @@
   padding-right: 80px;
   font-family: "Roboto", sans-serif;
   font-size: 0.625rem;
-  line-height: 11px;
   font-weight: 400;
   color: #414244;
   margin: 0;

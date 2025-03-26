@@ -16,23 +16,6 @@
   height: 30px;
   width: 100px;
 }
-.sidebar__compose-button--active {
-  background-color: #d2e3fc;
-  color: #4f4f4f;
-  font-weight: bold;
-}
 .sidebar__compose-button:hover {
   box-shadow: 0 6px 17px rgba(0, 0, 0, 0.2);
-}
-.sidebar__item {
-  cursor: pointer;
-  padding: 10px 20px;
-  transition: background-color 0.3s;
-}
-.sidebar__item--active {
-  background-color: #d2e3fc;
-  font-weight: bold;
-}
-.sidebar__item:hover {
-  background-color: #e3f2fd;
 }/*# sourceMappingURL=sidebar.css.map */

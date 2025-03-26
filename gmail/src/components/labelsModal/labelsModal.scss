@@ -98,18 +98,18 @@
         display: block;
       }
 
-      input {
-        width: 100%;
-        height: 40px;
-        border-radius: 6px;
-        border: 1px solid #ddd;
-        transition: border-color 0.3s ease;
-        cursor: pointer;
+      // input {
+      //   width: 100%;
+      //   height: 40px;
+      //   border-radius: 6px;
+      //   border: 1px solid #ddd;
+      //   transition: border-color 0.3s ease;
+      //   cursor: pointer;
 
-        &:focus {
-          border-color: #4caf50;
-        }
-      }
+      //   &:focus {
+      //     border-color: #4caf50;
+      //   }
+      // }
     }
 
     &-actions {
@@ -118,21 +118,21 @@
       gap: 10px;
 
       &-cancel {
-        background-color: #f44336;
-        color: $white;
+        background-color: $steam;
+        color: $carbon;
 
-        &:hover {
-          background-color: #e53935;
-        }
+        // &:hover {
+        //   background-color: #e53935;
+        // }
       }
 
       &-create {
-        background-color: #4caf50;
+        background-color: $azure;
         color: $white;
 
-        &:hover {
-          background-color: #45a049;
-        }
+        // &:hover {
+        //   background-color: #45a049;
+        // }
       }
 
       button {

@@ -7,17 +7,17 @@
   align-items: center;
   padding: 26px 0 0 23px;
 }
-.labels__header {
+.labels__wrapper-header {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.labels__title {
+.labels__wrapper-title {
   font-size: 18px;
   font-weight: bold;
   color: #313234;
 }
-.labels__add {
+.labels__wrapper-add {
   border: none;
   cursor: pointer;
   padding: 8px 12px;
@@ -37,18 +37,10 @@
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
-.labels__items-container:hover {
-  background-color: #f1f1f1;
-}
-.labels__items-container .labels__item-name {
-  font-size: 14px;
-  color: #333;
-  font-weight: 500;
-}
 
 .labelsModal {
   position: fixed;
-  background: white;
+  background: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);

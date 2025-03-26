@@ -1,4 +1,4 @@
-.snavigation__style {
+.snavigation__sidebar {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -9,7 +9,7 @@
   transition: background-color 0.3s, color 0.3s;
   text-decoration: none;
 }
-.snavigation__style-wrapper {
+.snavigation__sidebar-wrapper {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -22,20 +22,20 @@
   text-decoration: none;
   width: 225px;
 }
-.snavigation__style-wrapper:hover {
+.snavigation__sidebar-wrapper:hover {
   background-color: #e0e0e0;
 }
-.snavigation__style-wrapper-text {
+.snavigation__sidebar-wrapper-text {
   margin: 0;
   font-weight: 500;
   text-decoration: none;
   font-size: 14px;
   color: #4f4f4f;
 }
-.snavigation__menu {
+.snavigation__categories {
   display: flex;
 }
-.snavigation__menu-wrapper {
+.snavigation__categories-wrapper {
   display: flex;
   border: none;
   background-color: transparent;
@@ -46,16 +46,16 @@
   cursor: pointer;
   padding: 0 0 0 15px;
 }
-.snavigation__menu-wrapper span {
+.snavigation__categories-wrapper span {
   font-size: 18px;
 }
-.snavigation__menu-wrapper-text {
+.snavigation__categories-wrapper-text {
   color: #4f4f4f;
   font-size: 0.813rem;
   font-weight: 600;
   font-family: "Roboto", sans-serif;
 }
-.snavigation__menu.active {
+.snavigation__categories.active {
   color: #1967d2;
   border-bottom: 2px solid #1967d2;
 }/*# sourceMappingURL=sidebarItem.css.map */
